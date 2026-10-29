@@ -6,11 +6,124 @@
     <title>Estrutura HTML</title>
 </head>
 <body>
-    <div>
-    <h1>Entendendo Head e Body</h1>
-    <hr>
-    <p>Na seção &lt;head&gt; são definidas informações sobre o documento, como o título e os meta tags. Já a seção &lt;body&gt; contém todo o conteúdo visível da página.</p>
-    </div>
+    <header>
+        <h1>Guia básico de HTML</h1>
+        <p>Conheça a estrutura e alguns elementos usados para organizar o conteúdo de uma página.</p>
+    </header>
 
+    <main>
+    <section>
+        <h2>Entendendo head e body</h2>
+        <hr>
+        <p>Na seção <code>&lt;head&gt;</code> ficam informações sobre o documento, como o título da página e metadados. O conteúdo visível, como textos, imagens e links, fica na seção <code>&lt;body&gt;</code>.</p>
+    </section>
+
+    <section>
+        <h2>Hierarquia de títulos</h2>
+        <hr>
+        <p>Os títulos vão de <code>&lt;h1&gt;</code>, o nível principal, até <code>&lt;h6&gt;</code>, o nível mais específico. Use-os para organizar o assunto em uma ordem lógica, não apenas para mudar o tamanho do texto.</p>
+        <p>Esta página tem um único <code>&lt;h1&gt;</code> como título principal e usa <code>&lt;h2&gt;</code> para os títulos das seções.</p>
+    </section>
+
+    <section>
+        <h2>Tags semânticas</h2>
+        <hr>
+        <p>Tags semânticas descrevem a função do conteúdo e ajudam navegadores e tecnologias assistivas a compreender a estrutura da página.</p>
+        <ul>
+            <li><code>&lt;header&gt;</code>: introdução ou cabeçalho da página ou de uma seção.</li>
+            <li><code>&lt;nav&gt;</code>: grupo de links de navegação.</li>
+            <li><code>&lt;main&gt;</code>: conteúdo principal da página.</li>
+            <li><code>&lt;section&gt;</code>: agrupamento temático de conteúdo.</li>
+            <li><code>&lt;article&gt;</code>: conteúdo independente, como uma notícia ou publicação.</li>
+            <li><code>&lt;footer&gt;</code>: informações finais da página ou de uma seção.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Links e imagens</h2>
+        <hr>
+        <p>O elemento <code>&lt;a&gt;</code> cria links para outras páginas, arquivos ou partes da página. O texto do link deve indicar claramente o destino.</p>
+        <p><a href="https://makeitmeme.com/pt/" target="_blank" rel="noopener noreferrer">Visitar o site Make It Meme (abre em nova aba)</a></p>
+        <p>O elemento <code>&lt;img&gt;</code> insere uma imagem. O atributo <code>alt</code> oferece uma descrição textual quando a imagem não pode ser vista ou carregada.</p>
+        <img src="https://freepngimg.com/thumb/meme/98777-meme-dank-free-download-png-hq.png" alt="Cachorro em uma imagem de meme" width="250" height="250">
+    </section>
+
+    <section>
+        <h2>Listas e tabelas</h2>
+        <hr>
+        <p>Listas organizam itens relacionados. Use uma lista não ordenada quando a sequência não importa:</p>
+        <ul>
+            <li><code>&lt;header&gt;</code> para o cabeçalho.</li>
+            <li><code>&lt;main&gt;</code> para o conteúdo principal.</li>
+            <li><code>&lt;footer&gt;</code> para o rodapé.</li>
+        </ul>
+        <p>Use uma lista ordenada quando os itens tiverem uma sequência:</p>
+        <ol>
+            <li>Abra o documento HTML.</li>
+            <li>Organize o conteúdo dentro do <code>&lt;body&gt;</code>.</li>
+            <li>Salve o arquivo e abra-o no navegador.</li>
+        </ol>
+        <p>Tabelas apresentam dados relacionados em linhas e colunas. Não devem ser usadas para montar o layout da página.</p>
+        <table>
+            <caption>Exemplos de elementos HTML</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Elemento</th>
+                    <th scope="col">Função</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"><code>&lt;p&gt;</code></th>
+                    <td>Representa um parágrafo.</td>
+                </tr>
+                <tr>
+                    <th scope="row"><code>&lt;a&gt;</code></th>
+                    <td>Cria um link para outro destino.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Formulários</h2>
+        <hr>
+        <p>Formulários coletam informações por meio de campos associados a rótulos claros. Este exemplo demonstra o preenchimento no navegador; sem um servidor configurado, as respostas não serão armazenadas.</p>
+        <form method="get">
+            <p>
+                <label for="filme">Qual é seu filme favorito?</label>
+                <input type="text" id="filme" name="filme">
+            </p>
+            <p>
+                <label for="serie">Qual é sua série favorita?</label>
+                <input type="text" id="serie" name="serie">
+            </p>
+            <button type="submit">Enviar respostas de demonstração</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Matemática e química</h2>
+        <hr>
+        <p>Em HTML, as tags <code>&lt;sub&gt;</code> e <code>&lt;sup&gt;</code> ajudam a representar números abaixo ou acima da linha do texto.</p>
+        <p>Na química, o subscrito indica a quantidade de átomos: a água é representada por H<sub>2</sub>O e o dióxido de carbono por CO<sub>2</sub>.</p>
+        <p>Na matemática, o sobrescrito pode representar uma potência: 2<sup>3</sup> = 8.</p>
+        <p>Esses elementos são adequados para exemplos simples. Expressões matemáticas mais complexas podem ser representadas com MathML.</p>
+    </section>
+
+    <section>
+        <h2>Acessibilidade e boas práticas</h2>
+        <hr>
+        <p>A acessibilidade ajuda pessoas com diferentes habilidades e formas de navegação a compreender e usar a página.</p>
+        <ul>
+            <li>Organize o conteúdo com títulos em uma ordem lógica.</li>
+            <li>Use textos alternativos que descrevam imagens informativas.</li>
+            <li>Associe cada campo de formulário a um rótulo claro.</li>
+            <li>Escreva links com nomes que expliquem para onde levam.</li>
+            <li>Não use apenas cores para transmitir informações.</li>
+            <li>Teste a navegação usando o teclado e verifique se os controles são fáceis de identificar.</li>
+        </ul>
+    </section>
+    </main>
 </body>
 </html>
