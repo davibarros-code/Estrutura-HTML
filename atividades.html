@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="15 desafios práticos para aprender HTML, separados por nível de dificuldade.">
+    <title>Desafios de HTML</title>
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #252a34;
+            background: #f5f7fa;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 24px;
+            line-height: 1.6;
+        }
+
+        header,
+        .level,
+        footer {
+            background: #fff;
+            border: 1px solid #dfe3e8;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.25;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        nav ul,
+        .requirements {
+            padding-left: 22px;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 16px 8px 0;
+        }
+
+        a {
+            color: #0759bd;
+        }
+
+        .level-heading {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 8px 14px;
+            border-bottom: 1px solid #dfe3e8;
+            padding-bottom: 12px;
+        }
+
+        .level-heading h2 {
+            margin: 0;
+        }
+
+        .exercise {
+            border: 1px solid #e3e7ec;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 16px;
+        }
+
+        .exercise h3 {
+            margin-top: 0;
+        }
+
+        .difficulty {
+            display: inline-block;
+            border-radius: 999px;
+            padding: 2px 10px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .easy {
+            color: #176b3a;
+            background: #e4f5ea;
+        }
+
+        .medium {
+            color: #875400;
+            background: #fff1d2;
+        }
+
+        .hard {
+            color: #a32929;
+            background: #fde7e7;
+        }
+
+        .topics {
+            color: #4b5563;
+            font-size: 0.95rem;
+        }
+
+        code {
+            background: #f0f2f5;
+            border-radius: 4px;
+            padding: 1px 5px;
+        }
+
+        footer {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            header,
+            .level,
+            footer {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Desafios de HTML</h1>
+        <p>Pratique construindo páginas, do primeiro título a estruturas semânticas completas. Cada desafio tem um objetivo, requisitos e critérios para conferir seu resultado.</p>
+        <p><strong>Como participar:</strong> crie um arquivo HTML para cada desafio, abra-o no navegador e marque os requisitos concluídos. O foco é HTML; CSS é opcional, exceto quando você quiser personalizar a apresentação.</p>
+        <nav aria-label="Navegação por dificuldade">
+            <ul>
+                <li><a href="#facil">Fácil (5)</a></li>
+                <li><a href="#medio">Médio (5)</a></li>
+                <li><a href="#dificil">Difícil (5)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="level" id="facil" aria-labelledby="facil-titulo">
+            <div class="level-heading">
+                <h2 id="facil-titulo">Nível fácil</h2>
+                <span class="difficulty easy">Fácil</span>
+                <span>Desafios 1–5</span>
+            </div>
+
+            <article class="exercise">
+                <h3>1. Minha primeira página</h3>
+                <p><strong>Enunciado:</strong> crie uma página de apresentação pessoal que ajude alguém a conhecer você.</p>
+                <ul class="requirements">
+                    <li>Inclua a estrutura básica do documento e um idioma definido em <code>html</code>.</li>
+                    <li>Adicione um título para a aba do navegador, um título principal e dois parágrafos.</li>
+                    <li>Use um subtítulo para organizar uma seção chamada “Sobre mim”.</li>
+                </ul>
+                <p><strong>Critério de conclusão:</strong> o navegador exibe o título correto na aba, e o conteúdo tem apenas um <code>h1</code> com títulos em ordem lógica.</p>
+                <p class="topics"><strong>Tópicos:</strong> estrutura básica, <code>title</code>, títulos e parágrafos.</p>
+            </article>
+
+            <article class="exercise">
+                <h3>2. Receita favorita</h3>
+                <p><strong>Enunciado:</strong> publique uma receita simples para que outra pessoa consiga prepará-la.</p>
+                <ul class="requirements">
+                    <li>Apresente o nome da receita e uma breve descrição.</li>
+                    <li>Liste pelo menos quatro ingredientes com uma lista não ordenada.</li>
+                    <li>Explique o preparo em pelo menos três passos numerados.</li>
+                </ul>
+                <p><strong>Critério de conclusão:</strong> ingredientes e etapas estão em listas apropriadas, fáceis de identificar e seguir.</p>
+                <p class="topics"><strong>Tópicos:</strong> listas ordenadas e não ordenadas.</p>
+            </article>
+
+            <article class="exercise">
+                <h3>3. Cartão de leitura</h3>
+                <p><strong>Enunciado:</strong> faça uma pequena página sobre um livro que você recomenda.</p>
+                <ul class="requirements">
+                    <li>Inclua título, autor, gênero e uma sinopse escrita por você.</li>
+                    <li>Use <code>strong</code> para destacar uma informação importante e <code>em</code> para dar ênfase a uma frase.</li>
+                    <li>Separe os dados do livro e a sinopse em seções com subtítulos.</li>
+                </ul>
+                <p><strong>Critério de conclusão:</strong> os destaques mantêm sentido mesmo sem depender de aparência visual.</p>
+                <p class="topics"><strong>Tópicos:</strong> ênfase semântica, parágrafos e organização por títulos.</p>
+            </article>
+
+            <article class="exercise">
+                <h3>4. Lugares para conhecer</h3>
+                <p><strong>Enunciado:</strong> crie um guia com três lugares que gostaria de visitar.</p>
+                <ul class="requirements">
+                    <li>Apresente os lugares em uma lista.</li>
+                    <li>Para cada lugar, escreva uma frase explicando o motivo da visita.</li>
+                    <li>Adicione um link para uma fonte de informações sobre pelo menos um destino.</li>
+                </ul>
+                <p><strong>Critério de conclusão:</strong> o texto de cada link explica seu destino, e os links funcionam ao serem abertos.</p>
+                <p class="topics"><strong>Tópicos:</strong> links, listas e texto descritivo.</p>
+            </article>
+
+            <article class="exercise">
+                <h3>5. Horário da semana</h3>
+                <p><strong>Enunciado:</strong> monte uma tabela com atividades planejadas para três dias.</p>
+                <ul class="requirements">
+                    <li>Inclua uma legenda para a tabela e cabeçalhos para os dias e atividades.</li>
+                    <li>Adicione pelo menos três atividades por dia.</li>
+                    <li>Use elementos próprios para cabeçalho e corpo da tabela.</li>
+                </ul>
+                <p><strong>Critério de conclusão:</strong> cada coluna tem um cabeçalho claro e a tabela faz sentido quando lida linha por linha.</p>
+                <p class="topics"><strong>Tópicos:</strong> tabelas, legenda e cabeçalhos.</p>
+            </article>
+        </section>
+
+        <section class="level" id="medio" aria-labelledby="medio-titulo">
+            <div class="level-heading">
+                <h2 id="medio-titulo">Nível médio</h2>
+                <span class="difficulty medium">Médio</span>
+                <span>Desafios 6–10</span>
+            </div>
+
+            <article class="exercise">
+                <h3>6. Perfil de artista</h3>
+                <p><strong>Enunciado:</strong> construa um perfil sobre uma pessoa artista, atleta ou cientista que você admira.</p>
+                <ul class="requirements">
+                    <li>Organize a página com cabeçalho, conteúdo principal, seções e rodapé semânticos.</li>
+                    <li>Inclua uma imagem com texto alternativo que descreva seu conteúdo.</li>
+                    <li>Adicione uma lista com três fatos e um link para uma biografia ou fonte confiável.</li>
+                </ul>
+                <p><strong>Critério de conclusão:</strong> a imagem tem <code>alt</code> significativo e as regiões da página podem ser identificadas pelas tags usadas.</p>
+                <p class="topics"><strong>Tópicos:</strong> tags semânticas, imagens, texto alternativo e links.</p>
+            </article>
+
+            <article class="exercise">
+                <h3>7. Notícia completa</h3>
+                <p><strong>Enunciado:</strong> apresente uma notícia fictícia sobre um evento da sua comunidade.</p>
+                <ul class="requirements">
+                    <li>Crie um artigo independente com título, subtítulo, autoria e data de publicação.</li>
+                    <li>Use <code>time</code> com um valor de data legível por máquina.</li>
+                    <li>Divida o texto em pelo menos três parágrafos e inclua uma citação com atribuição.</li>
+                </ul>
+                <p><strong>Critério de conclusão:</strong> a matéria pode ser compreendida por si só, e a data está representada de forma apropriada.</p>
+                <p class="topics"><strong>Tópicos:</strong> <code>article</code>, <code>time</code>, citações e hierarquia.</p>
+            </article>
+
+            <article class="exercise">
+                <h3>8. Formulário de contato</h3>
+                <p><strong>Enunciado:</strong> crie um formulário para receber uma mensagem de um visitante.</p>
+                <ul class="requirements">
+                    <li>Inclua campos para nome, e-mail, assunto e mensagem, cada um com um rótulo associado.</li>
+                    <li>Use tipos de campo adequados e marque nome, e-mail e mensagem como obrigatórios.</li>
+                    <li>Adicione um botão de envio e uma breve explicação sobre o uso dos dados.</li>
+                </ul>
+                <p><strong>Critério de conclusão:</strong> todos os campos têm rótulos clicáveis, e o navegador avisa quando um campo obrigatório está vazio.</p>
+                <p class="topics"><strong>Tópicos:</strong> formulários, <code>label</code>, tipos de <code>input</code> e validação nativa.</p>
+            </article>
+
+            <article class="exercise">
+                <h3>9. Catálogo de produtos</h3>
+                <p><strong>Enunciado:</strong> apresente três produtos de uma pequena loja em uma tabela comparativa.</p>
+                <ul class="requirements">
+                    <li>Inclua nome, descrição e preço de cada produto.</li>
+                    <li>Use legenda, cabeçalhos de coluna e cabeçalhos de linha corretamente associados.</li>
+                    <li>Formate os preços como valores monetários em reais e acrescente uma nota sobre os dados.</li>
+                </ul>
+                <p><strong>Critério de conclusão:</strong> uma pessoa que usa leitor de tela consegue identificar a que produto e coluna cada valor pertence.</p>
+                <p class="topics"><strong>Tópicos:</strong> tabelas acessíveis, <code>caption</code> e escopo de cabeçalhos.</p>
+            </article>
+
+            <article class="exercise">
+                <h3>10. Roteiro de viagem</h3>
+                <p><strong>Enunciado:</strong> prepare uma página com um roteiro de viagem de dois dias.</p>
+                <ul class="requirements">
+                    <li>Separe cada dia em uma seção com título próprio e ordene as atividades.</li>
+                    <li>Inclua pelo menos uma imagem com legenda e uma lista de itens para levar.</li>
+                    <li>Adicione links para dois locais do roteiro e um link para voltar ao início da página.</li>
+                </ul>
+                <p><strong>Critério de conclusão:</strong> os links internos levam aos destinos corretos, e a imagem tem descrição e legenda visível.</p>
+                <p class="topics"><strong>Tópicos:</strong> âncoras, <code>figure</code>, <code>figcaption</code> e estrutura semântica.</p>
+            </article>
+        </section>
+
+        <section class="level" id="dificil" aria-labelledby="dificil-titulo">
+            <div class="level-heading">
+                <h2 id="dificil-titulo">Nível difícil</h2>
+                <span class="difficulty hard">Difícil</span>
+                <span>Desafios 11–15</span>
+            </div>
+
+            <article class="exercise">
+                <h3>11. Portfólio profissional</h3>
+                <p><strong>Enunciado:</strong> crie um portfólio de uma página para apresentar uma pessoa profissional e seus trabalhos.</p>
+                <ul class="requirements">
+                    <li>Organize a página com navegação, conteúdo principal, pelo menos três seções e rodapé.</li>
+                    <li>Inclua uma lista de projetos; cada projeto deve ter título, resumo e link identificável.</li>
+                    <li>Adicione um link para pular diretamente ao conteúdo principal e mantenha uma hierarquia de títulos coerente.</li>
+                </ul>
+                <p><strong>Critério de conclusão:</strong> é possível navegar por teclado até o conteúdo e por cada seção usando os links de navegação.</p>
+                <p class="topics"><strong>Tópicos:</strong> landmarks, navegação por âncoras, foco e hierarquia.</p>
+            </article>
+
+            <article class="exercise">
+                <h3>12. Inscrição em evento</h3>
+                <p><strong>Enunciado:</strong> monte um formulário completo de inscrição para uma conferência fictícia.</p>
+                <ul class="requirements">
+                    <li>Agrupe os dados pessoais e as preferências em conjuntos com legendas.</li>
+                    <li>Inclua campos obrigatórios, opções de escolha única, caixas de seleção e uma lista suspensa.</li>
+                    <li>Use atributos de validação nativa adequados e explique quais dados são necessários.</li>
+                </ul>
+                <p><strong>Critério de conclusão:</strong> todos os controles têm rótulos associados, os grupos são identificados e as validações funcionam sem JavaScript.</p>
+                <p class="topics"><strong>Tópicos:</strong> <code>fieldset</code>, <code>legend</code>, controles e validação HTML.</p>
+            </article>
+
+            <article class="exercise">
+                <h3>13. Central de ajuda</h3>
+                <p><strong>Enunciado:</strong> crie uma página de perguntas frequentes para um serviço fictício.</p>
+                <ul class="requirements">
+                    <li>Inclua ao menos seis perguntas com respostas relacionadas ao serviço.</li>
+                    <li>Use elementos nativos expansíveis para mostrar e ocultar respostas.</li>
+                    <li>Agrupe as perguntas por assunto e adicione links para as seções de cada assunto.</li>
+                </ul>
+                <p><strong>Critério de conclusão:</strong> cada resposta pode ser aberta e fechada pelo teclado e pela interação nativa do navegador.</p>
+                <p class="topics"><strong>Tópicos:</strong> <code>details</code>, <code>summary</code>, agrupamento e navegação.</p>
+            </article>
+
+            <article class="exercise">
+                <h3>14. Galeria multimídia acessível</h3>
+                <p><strong>Enunciado:</strong> publique uma galeria temática que combine imagens, áudio ou vídeo.</p>
+                <ul class="requirements">
+                    <li>Organize os itens com elementos apropriados para figuras e legendas.</li>
+                    <li>Forneça texto alternativo para imagens e controles nativos para áudio ou vídeo.</li>
+                    <li>Inclua uma transcrição ou alternativa textual para o conteúdo de áudio e vídeo.</li>
+                </ul>
+                <p><strong>Critério de conclusão:</strong> o conteúdo continua compreensível sem carregar as mídias, e os controles podem ser usados por teclado.</p>
+                <p class="topics"><strong>Tópicos:</strong> imagens, áudio, vídeo, legendas e alternativas acessíveis.</p>
+            </article>
+
+            <article class="exercise">
+                <h3>15. Miniportal de notícias</h3>
+                <p><strong>Enunciado:</strong> construa a página inicial de um portal com notícias, navegação e uma área de contato ou inscrição.</p>
+                <ul class="requirements">
+                    <li>Apresente uma navegação principal, conteúdo principal, notícias independentes e informações complementares.</li>
+                    <li>Inclua pelo menos três notícias com título, resumo, autoria, data e link para leitura.</li>
+                    <li>Acrescente um formulário acessível, metadados essenciais no <code>head</code> e um link para pular a navegação.</li>
+                    <li>Verifique idioma, ordem dos títulos, texto alternativo e rótulos em toda a página.</li>
+                </ul>
+                <p><strong>Critério de conclusão:</strong> a página tem estrutura semântica consistente, pode ser percorrida pelo teclado e explica seus conteúdos sem depender de imagens ou estilos.</p>
+                <p class="topics"><strong>Tópicos:</strong> estrutura semântica completa, metadados, acessibilidade e formulários.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desafios autorais para praticar HTML. Faça primeiro a estrutura e os requisitos; depois, personalize como quiser.</p>
+    </footer>
+</body>
+</html>
